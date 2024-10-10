@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Customer Self-Service Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <h1>Insurance Customer Self-Service Portal</h1>
+        <ul>
+            <li><a href="#fileClaim">File a Claim</a></li>
+            <li><a href="#trackClaim">Track Claims</a></li>
+            <li><a href="#chatbot">Chatbot</a></li>
+        </ul>
+    </nav>
+
+    <!-- Claim Submission Form -->
+    <section id="fileClaim">
+        <h2>Submit a New Insurance Claim</h2>
+        <form id="claimForm">
+            <label for="policyNumber">Policy Number:</label>
+            <input type="text" id="policyNumber" name="policyNumber" required>
+
+            <label for="incidentDate">Incident Date:</label>
+            <input type="date" id="incidentDate" name="incidentDate" required>
+
+            <label for="incidentDescription">Incident Description:</label>
+            <textarea id="incidentDescription" name="incidentDescription" required></textarea>
+
+            <label for="fileUpload">Attach Files:</label>
+            <input type="file" id="fileUpload" name="fileUpload" required>
+
+            <button type="submit">Submit Claim</button>
+            <div id="formMessage"></div>
+        </form>
+    </section>
+
+    <!-- Claim Tracking -->
+    <section id="trackClaim">
+        <h2>Track Your Claims</h2>
+        <table id="claimsTable">
+            <thead>
+                <tr>
+                    <th>Claim Number</th>
+                    <th>Status</th>
+                    <th>Date Submitted</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dynamically populated claims will appear here -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Chatbot Integration -->
+    <section id="chatbot">
+        <h2>Chat with Us (AI-Powered Chatbot)</h2>
+        <div id="chatbotContainer">
+            <!-- Dialogflow Chatbot will be embedded here -->
+        </div>
+    </section>
+
+    <!-- Knowledge Base -->
+    <section id="knowledgeBase">
+        <h2>Search Knowledge Base</h2>
+        <input type="text" id="searchBar" placeholder="Search FAQs...">
+        <ul id="searchResults"></ul>
+    </section>
+
+    <script src="script.js"></script>
+    <!-- Add this Dialogflow Chatbot Integration -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Insurance Bot"
+      agent-id="YOUR_AGENT_ID"
+      language-code="en"
+    ></df-messenger>
+</body>
+</html>

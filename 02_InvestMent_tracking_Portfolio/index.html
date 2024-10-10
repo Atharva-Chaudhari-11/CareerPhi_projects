@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/03dc394cf8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./images/vr-logo-icon.svg" type="image/x-icon">
+    <title>Dashboard-My Investment | Portfolio</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#">
+                <img src="./imges/logo-mobile.svg" alt="">
+            </a>    
+            <!-- Replace with your logo image if needed -->
+        </div>
+        <div class="center">
+            <ul class="nav-links">
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Funds</a></li>
+                <li><a href="#">Stocks</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+            <div class="subscribe-button">
+                <button>Subscribe</button>
+            </div>
+        </div>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." class="search-input">
+            <i class="fas fa-search search-icon"></i> <!-- Search icon -->
+        </div>
+        <div class="signup">
+            <a href="#">Sign Up</a>
+        </div>
+    </nav>
+
+    <header class="header-container">
+        <div class="left-side">
+            <h2>Your personal Portfolio Manager</h2>
+            <ul>
+                <li style="display: flex; gap: 10px;">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                    <a href="">Hassle-free & automated transaction imports</a>
+                </li>
+                <li style="display: flex; gap: 10px;">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                    <a href="">Powerful performance analytics and comparisons</a>
+                </li>
+                <li style="display: flex; gap: 10px;">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                    <a href="">Detailed & ready to file tax statement</a>
+                </li>
+                <li style="display: flex; gap: 10px;">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                    <a href="">Automated capturing of all dividends, bonuses, rights, and splits</a>
+                </li>
+                <li style="display: flex; gap: 10px;">
+                    <i class="fa-solid fa-check" style="color: green;"></i>
+                    <a href="">Manage and track your and your family's investments in one place</a>
+                </li>
+            </ul>
+            <p>This undoubtedly makes it India’s best portfolio management system. Experience the magic yourself!</p>
+        </div>
+
+        <div class="right-side">
+            <img src="./imges/portfolio-group-icon.svg" alt="">
+        </div>
+    </header>
+
+    <!-- Investment Portfolio Tracker Section -->
+    <h1>Personal Investment</h1>
+    
+    <section id="portfolio-value" class="investment">
+        <h2>CURRENT VALUE: <span style="color: red;">$</span><span style="color: red;" id="total-value">0</span></h2>
+        <h5> <span style="color: red;">$</span><span style="color: red;" id="total-invested">0</span> Invested </h5> <!-- New total invested amount -->
+    </section>
+
+    <section id="add-investment">
+        <h3>Add New Investment</h3>
+        <form id="investment-form" class="form-css">
+            <div class="form-group">
+                <label for="asset-name">Asset Name:</label>
+                <input type="text" id="asset-name" required>
+            </div>
+            <div class="form-group">
+                <label for="invested-amount">Amount Invested:</label>
+                <input type="number" id="invested-amount" required>
+            </div>
+            <div class="form-group">
+                <label for="current-value">Current Value:</label>
+                <input type="number" id="current-value" required>
+            </div>
+            <button type="submit">Add Investment</button>
+        </form>
+    </section>
+    
+    <section id="investment-list">
+        <h3>Investment List</h3>
+        <table id="investment-table">
+            <thead>
+                <tr>
+                    <th>Asset Name</th>
+                    <th>Invested Amount</th>
+                    <th>Current Value</th>
+                    <th>Change (%)</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="investment-items"></tbody>
+        </table>
+    </section>
+    
+    <section id="portfolio-chart">
+        <h3>Portfolio Distribution</h3>
+        <canvas id="pie-chart" width="150" height="150"></canvas>
+ <!-- Adjusted size -->
+    </section>
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

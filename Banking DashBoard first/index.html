@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container"> 
+                <h1 class="heading">Banking Dashboard</h1>
+            <div class="current-balance">
+                <h2>Current Balance : $<span id="currentB">1000</span> </h2>
+            </div>
+            <div class="deposit-amount">
+                <label for="Deposit" class="labell"> Deposit Amount</label>
+                <input type="number" class="inputt" id="dp-amount" placeholder="Enter Deposit Amount" >
+                <button class="btn"  id="deposit-button">Deposit</button>
+            </div>
+        
+            <div class="withdraw-amount">
+                <label for="Withdraw" class="labell">Withdraw Amount</label>
+                <input type="number" class="inputt" id="wd-amount" placeholder="Enter Withdraw Amount" >
+                <button class="btn"  id="withdraw-button">Withdraw</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Contact us: info@bank.com | Follow us on social media</p>
+    </footer>
+
+    <script src="./DashBoradScript.js"></script>
+</body>
+</html>

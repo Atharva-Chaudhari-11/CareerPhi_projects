@@ -1,0 +1,309 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background: white;
+}
+
+.container {
+    margin: 0 20px;
+}
+
+header.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(27, 27, 112);
+    padding: 10px;
+    color: white;
+}
+
+.navbar {
+    margin-top: 15px; /* Spacing below header */
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex; /* Horizontal layout */
+    justify-content: space-around; /* Space items evenly */
+    gap: 20px;
+    text-decoration: none;
+}
+
+.navbar li:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Header styling */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Optional padding for spacing */
+    background-color: transparent; /* Remove the white background */
+}
+
+/* Bank logo in header */
+.bank-logo-header {
+    width: 50px; /* Size of the logo */
+    height: auto;
+    margin-right: 15px; /* Space between logo and heading */
+}
+
+/* Profile section */
+.profile-section {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-name {
+    font-size: 18px;
+}
+
+.dashboard-container {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Adjust the width of the credit and withdraw fields */
+.credit-otherfilds-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+/* Current Balance styling */
+.current-balance {
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ccc; /* Border around the section */
+    border-radius: 10px; /* Rounded corners */
+    padding: 15px; /* Padding for spacing */
+    text-align: center; /* Centered text */
+    margin: 20px 0; /* Space above and below */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.current-balance h2 {
+    font-size: 28px; /* Font size */
+    color: #333; /* Darker text color */
+}
+
+/* Deposit and Withdraw container styling */
+.transaction-section {
+    width: 100%; /* Increase the width to fit the new card size */
+}
+
+/* Transaction styling */
+.transaction {
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px; /* Increase padding for more space inside the card */
+    margin: 10px 0; /* Space between transaction boxes */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: transform 0.3s; /* Add a smooth transition effect */
+}
+
+.transaction:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover for effect */
+}
+
+/* Adjust input fields to match new card size */
+.transaction input {
+    width: calc(100% - 22px); /* Full width minus padding */
+    height: 45px; /* Increase input height for better usability */
+    border: 2px solid #007bff; /* Blue border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px; /* Padding for input */
+    font-size: 16px; /* Font size */
+    margin-bottom: 10px; /* Space below input */
+}
+
+.btn {
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    padding: 10px 15px; /* Padding for buttons */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Credit card design */
+.credit-card {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 450px; /* Max width for larger screens */
+    height: 250px;
+    background-color: rgb(63, 113, 138);
+    border-radius: 15px;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin-left: 0; /* Centered on smaller screens */
+    margin-top: 30px;  /* Adjust vertical alignment */
+    position: relative;
+}
+
+/* Card logo styling (placed at top-right corner) */
+.card-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Move the logo to the right corner */
+}
+
+.card-logo-img {
+    width: 180px; /* Adjust the size as needed */
+    height: auto;
+}
+
+/* Username and balance on the card */
+.card-details h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card-details p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+/* Credit card number and expiry */
+.card-number, .card-expiry {
+    font-size: 1.2em;
+}
+
+.card-expiry {
+    text-align: right;
+}
+
+/* Transaction History */
+.transaction-history {
+    margin-top: 40px;
+}
+
+.transaction-history h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.transaction-history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.transaction-history th, .transaction-history td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.transaction-history th {
+    background-color: #333;
+    color: white;
+}
+
+.transaction-history tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.transaction-history tr:hover {
+    background-color: #ddd;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+}
+
+/* managing the top images log section */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.LogoSbi {
+    width: 100px;
+    height: 100px;
+}
+
+/* advertisement */
+.advertisemsent {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.advertisemsent img {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+/* Responsive Styles */
+@media (max-width: 900px) {
+    .deposit-withdraw-container {
+        flex-direction: column; /* Stack deposit and withdraw fields */
+    }
+
+    .transaction-section, .credit-card {
+        width: 100%; /* Full width for smaller screens */
+    }
+    .credit-card {
+        margin: 0 auto; /* Center credit card */
+    }
+
+    .current-balance {
+        margin: 10px 0; /* Adjust margin for smaller screens */
+    }
+
+    .advertisemsent {
+        margin-top: 10px; /* Space between advertisement and content */
+    }
+
+    .dashboard-header , .navbar{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        overflow: hidden;
+    }
+
+}
+    .header-toggle {
+        display: none; /* Show toggle icon */
+        cursor: pointer; /* Change cursor to pointer */
+    }

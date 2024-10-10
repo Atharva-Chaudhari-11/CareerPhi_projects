@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Bank of India</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./images/OIP.jpeg" type="image/png"> <!-- Favicon Link -->
+</head>
+<body>
+    <!-- container to m,anage teh qual pading fromn both side -->
+<div class="container">
+    <div class="top-section"">
+        <img class="LogoSbi" src="./images/SBimain.png"> <!-- Bank Logo -->
+        <img class="LogoSbi" src="./images/mainCredit.png" class="bank-logo-header"> <!-- Bank Logo -->
+    </div>
+    
+    <header class="dashboard-header">
+        <div class="header-toggle" id="header-toggle">
+            <!-- <img src="./images/hamburger-icon.png" alt="Menu" > -->
+            <i class="fa-solid fa-bars menu-icon"></i>
+        </div>
+        <nav class="navbar">
+            <ul style="align-items: center;">
+                <li><a href="">PERSONAL</a></li>
+                <li><a href="">NRI</a></li>
+                <li><a href="">BUSINESS</a></li>
+                <li><a href="">AGRICULTURAL & RURAL</a></li>
+                <li><a href="">INTERNATIONAL BANKING</a></li>
+                <li><a href="">SBI Wealth</a></li>
+                <li><a href="">SBI Green</a></li>
+                <li><a href=""><img src="./images/yono.png" style="width: 150px;" alt=""></a></li>
+            </ul>
+        </nav>
+        <div class="profile-section">
+            <img src="./images/joe.jpeg" alt="Profile Picture" class="profile-img">
+            <p class="profile-name">John Doe</p>
+        </div>
+    </header>
+
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+      
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="current-balance">
+                <h2>Current Balance: $<span id="currentB">1000</span></h2>
+            </div>
+            
+            <div class="credit-otherfilds-container">
+
+                <div class="deposit-withdraw-container">
+                    <div class="transaction-section">
+                        <div class="transaction deposit-amount">
+                            <label for="dp-amount" class="labell">Deposit Amount</label>
+                            <input type="number" class="inputt" id="dp-amount" placeholder="Enter Deposit Amount">
+                            <button class="btn" id="deposit-button">Deposit</button>
+                        </div>
+                        <div class="transaction withdraw-amount">
+                            <label for="wd-amount" class="labell">Withdraw Amount</label>
+                            <input type="number" class="inputt" id="wd-amount" placeholder="Enter Withdraw Amount">
+                            <button class="btn" id="withdraw-button">Withdraw</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Credit Card Display -->
+                <div class="credit-card">
+                    <div class="card-logo">
+                        <img src="./images/credit.png" alt="Card Logo" class="card-logo-img"> <!-- Credit Card Logo -->
+                    </div>
+                    <div class="card-details">
+                        <h2 id="card-username">John Doe</h2> <!-- Username on the card -->
+                        <p>Balance: $<span id="card-balance">1000</span></p> <!-- Current balance on the card -->
+                    </div>
+                    <div class="card-number">
+                        <p>**** **** **** 1234</p>
+                    </div>
+                    <div class="card-expiry">
+                        <p>Valid Thru: 12/26</p>
+                    </div>
+                </div>
+                
+            </div>
+                
+        </div>
+
+            <!-- Transaction History -->
+            <section class="transaction-history">
+                <h2>Transaction History</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>25/09/2024</td>
+                            <td>11:30 AM</td>
+                            <td>Deposit</td>
+                            <td>$1000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+        </main>
+    </div>
+    <!-- advertisement -->
+    <div class="advertisemsent">
+        <a href="">
+            <img src="./images/sbi-mega-auction.jpg" alt="">
+        </a>
+    </div>
+    <footer>
+        <p>Contact us: <a style="text-decoration: none; color: white;" href="https://www.onlinesbi.sbi/">SBI@bank.com</a>| Follow us on social media</p>
+    </footer>
+
+</div>
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/03dc394cf8.js" crossorigin="anonymous"></script>
+</body>
+</html>
